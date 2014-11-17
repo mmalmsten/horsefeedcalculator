@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta id="module" name="foder" content="widget" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Foderkalkylatorn
+</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript">
+</script>
+<script src="foder.js">
+</script>	
+<script type="text/javascript" src="myjs/bootstrap.min.js">
+</script>
+<script type="text/javascript" src="myjs/jquery.scrollorama.js">
+</script>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+</script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+</script>
+<![endif]-->
+
+
+<link href="mycss/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="mycss/style.css" rel="stylesheet" media="screen">
+<link href="mycss/ionicons.css" rel="stylesheet" media="screen">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56656669-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body onload="ready()">
+<div class="scrollblock">
+
+<div id="overall">    
+<div id="noll" class="page-section"></div>	  
+
+<div class="jumbotron">
+<a href="#noll" class="scroll-link" data-id="noll">
+<center><h1>Foderkalkylatorn</h1></a>
+
+<button type="button" class="btn btn-lg btn-default" data-toggle="modal" data-target="#kalkylatorn">Om kalkylatorn</button>
+<div class="modal fade" id="kalkylatorn" tabindex="-1" role="dialog" aria-labelledby="kalkylatornLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="kalkylatornLabel">Om kalkylatorn</h3>
+      </div>
+      <div class="modal-body">
+
+          <p>Foderkalkylatorn är skapad för att göra foderstatsberäkningarna enkla för er hästägare. I stället för att själva behöva sitta och titta i formelboken, försöka komma ihåg gymnasiematematiken, och när näringsbehovet är uträknat (baserat på en mängd olika faktorer), matcha värderna mot olika foder för att se vilket foder som passar hästen bäst. Alldeles för tråkigt, jobbigt, komplicerat, och tidskrävande!
+
+          <p>I Foderkalkylatorn har jag matat in formlerna från den där formelboken, och låter istället programmet räkna ut hästens näringsbehov. Ett stort antal olika tilläggsfodersorter, samt respektives näringsinnehåll, har lagts i en databas. Sedan, baserat på hästens näringsbehov, föreslår programmet en rimlig mängd grovfoder och tilläggsfoder.
+
+          <h3>Tekniken bakom Foderkalkylatorn</h3>
+          <p>Det började i juni 2014, när jag bestämde mig för att jag minsann skulle lära mig hur man lagrar och hämtar data från en MySQL-databas - något jag aldrig gjort förut. Inte långt senare var Foderkalkylatorn 1.0 redo att publiceras. Jag skrattar mig själv i ansiktet när jag tänker på att jag, för bara ett par månader sedan, tyckte att grundläggande PHP och MySQL var krångligt!
+
+          <p>Sedan såg jag ljuset ... Nej, jag skojar bara; Sen blev jag presenterad för Prolog! Ett "logiskt programmeringsspråk" som dök upp 1972, och är associerat med artificiell intelligens och datorlingvistik. Logiskt tänkande är min starka sida, så detta språk passade mig perfekt.
+
+          <p>För att göra en lång historia kort slutade det med att jag omkodade Foderkalkylatorn till en relativt komplicerat, webbaserat program, baserat på WebSockets och Prolog som back-end. Funktionen att använda Prolog som ett back-end-program, är dessutom en relativt ny möjlighet.
+
+          <p>Det är därför jag vågar säga att Foderkalkylatorn 2.0, verkligen är "one of a kind".
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-lg btn-default" data-toggle="modal" data-target="#faq">FAQ</button>
+<div class="modal fade" id="faq" tabindex="-1" role="dialog" aria-labelledby="faqLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="faqLabel">FAQ</h3>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-lg btn-default" data-toggle="modal" data-target="#instruktionsfilm">Instruktioner</button>
+<div class="modal fade" id="instruktionsfilm" tabindex="-1" role="dialog" aria-labelledby="instruktionsfilmLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="instruktionsfilmLabel">Instruktioner</h3>
+      </div>
+      <div class="modal-body">
+
+		<p />Denna foderstat består till 100% av olika matematiska formler. Glöm inte, att ögat är den bästa foderstatsberäknaren. Var noga med att se över hästens hull med jämna mellanrum, och justera foderstaten därefter.
+
+		<p />Vid tveksamheter eller frågor angående Din hästs foderstat, rådfråga Din veterinär eller annan kunnig person.
+
+		<p />Fodervärden samt information om respektive foder, är hämtat från fodertillverkarens webbsida. Samtliga produktbilder är hämtade från respektive företags webbsida. 
+		
+		<p />Jag reserverar mig för eventuella felberäkningar i foderstaten, felaktiga fodervärden, och dylikt.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-lg btn-default" data-toggle="modal" data-target="#kontakta">Kontakta</button>
+<div class="modal fade" id="kontakta" tabindex="-1" role="dialog" aria-labelledby="kontaktaLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="kontaktaLabel">Kontakta</h3>
+      </div>
+      <div class="modal-body">
+		<p />foder @ easyrider.nu
+
+        <p />Saknar Du någon fodersort, eller har Du sett något fel i någon uträkning, får du väldigt gärna kontakta mig!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><a href="#ett" class="scroll-link" data-id="ett" id="move1"><span class="hidden-sm hidden-xs">BÖRJA</span><i class="ion-ios7-arrow-down"></i><span class="hidden-sm hidden-xs">RÄKNA</span></a></center>
+</div>
+
+<section class="transparent">	        
+<div id="ett" class="page-section"></div>
+<div class="wrapper">
+<div class="dontprint">       
+
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading">
+Allmän info
+</div>
+<div class="panel-body">
+
+
+<div id="divinfo" class="col-sm-6">
+<input type="text" name="horsename" id="horsename" value="" class="form-control" placeholder="Hästens namn" />
+<hr class="divide">
+<select name="horsetype" id="horsetype" class="form-control">
+<option value="1">
+Hästen är lättfödd
+</option>
+<option value="1.05">
+Hästen är normalfödd
+</option>
+<option value="1.1">
+Hästen är svårfödd
+</option>
+</select>
+
+<hr class="divide">
+<select id="horseshape" class="form-control">
+<option value="none">Hästen är normalviktig</option>
+<option value="overweight">Hästen är överviktig</option>
+<option value="underweight">Hästen är underviktig</option>
+</select>
+<hr class="divide">
+
+<div class="input-group"><span class="input-group-addon">Hästens nuvarande vikt (kg)</span>
+
+<input type="text" name="horseweight" id="horseweight" value="350" class="form-control" />
+<span class="input-group-addon"><button title='Beräkna vikt' class='btn btn-img' data-toggle="modal" data-target="#hweight" style="color:#f0f;"><i class="ion-plus-circled"></i></button></span></div>	
+
+<hr class="divide">
+
+<div id="overweight" class="weight" style="display:none">Hästens totala övervikt (kg)
+<input type="text" name="addoverweight" id="addoverweight" value="0" class="form-control" /></div>
+<div id="underweight" class="weight" style="display:none">Hästens totala undervikt (kg)
+<input type="text" name="addunderweight" id="addunderweight" value="0" class="form-control" /></div>
+<script>
+$(function() {
+$('#horseshape').change(function(){
+$('.weight').hide();
+$('#' + $(this).val()).show();
+});
+});
+</script>
+</div>
+<div id="divinfo" class="col-sm-6">
+
+
+<div class="input-group"><span class="input-group-addon">Hästens ålder</span><select name="horseage" id="horseage" class="form-control">
+<option value="0">
+3-19 år
+</option>
+<option value="0.1">
+över 20 år
+</option>
+</select></div>
+
+<hr class="divide">
+
+<div class="input-group"><span class="input-group-addon">Hästens kön</span><select name="horsesex" id="horsesex" class="form-control">
+<option value="0">
+Sto
+</option>
+<option value="0">
+Vallack
+</option>
+<option value="0.1">
+Hingst
+</option>
+</select></div>
+
+<hr class="divide">
+<div class="input-group"><span class="input-group-addon">Utetemp. är</span><select name="temperature" id="temperature" class="form-control">
+<option value="0">
+Varmare än -15°C
+</option>
+<option value="0">
+-15°C
+</option>
+<option value="0.027">
+-16°C
+</option>
+<option value="0.054">
+-17°C
+</option>
+<option value="0.081 ">
+-18°C
+</option>
+<option value="0.108 ">
+-19°C
+</option>
+<option value="0.135 ">
+-20°C
+</option>
+<option value="0.162 ">
+-21°C
+</option>
+<option value="0.189 ">
+-22°C
+</option>
+<option value="0.216 ">
+-23°C
+</option>
+<option value="0.243 ">
+-24°C
+</option>
+<option value="0.27 ">
+-25°C
+</option>
+</select></div>
+<hr class="divide">
+
+<div class="input-group"><span class="input-group-addon">Går hästen i grupphållning?</span><select name="horseoutdoors" id="horseoutdoors" class="form-control">
+<option value="0">
+Nej
+</option>
+<option value="0.1">
+Ja
+</option>
+</select></div>
+
+</div>
+<div class="clear"></div>
+<center>
+<a href="#tva" class="scroll-link" data-id="tva"><button type='button' class='btn btn-lg btn-success' style="float:none; margin-top:50px;" id="totva">Nästa steg!</button></a>
+</center>
+
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+
+</section>	        
+<section>	
+<div id="tva" class="page-section"></div>        
+<div class="wrapper">
+
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading">
+Ett vanligt ridpass består av:
+</div>
+<div class="panel-body">
+<div class="col-sm-3">
+<div class="input-group"><select name="horsewalk" id="horsewalk" class="form-control">
+<option value="0">
+0
+</option>
+<option value="1">
+10
+</option>
+<option value="1.5">
+15
+</option>
+<option value="2">
+20
+</option>
+<option value="2.5">
+25
+</option>
+<option value="3">
+30
+</option>
+<option value="3.5">
+35
+</option>
+<option value="4">
+40
+</option>
+<option value="4.5">
+45
+</option>
+<option value="5">
+50
+</option>
+<option value="5.5">
+55
+</option>
+<option value="6">
+60
+</option>
+</select><span class="input-group-addon">Min skritt</span></div>
+</div>
+<div class="col-sm-4">
+<div class="input-group"><select name="horsetrot" id="horsetrot" class="form-control">
+<option value="0">
+0
+</option>
+<option value="0.5">
+5
+</option>
+<option value="1">
+10
+</option>
+<option value="1.5">
+15
+</option>
+<option value="2">
+20
+</option>
+<option value="2.5">
+25
+</option>
+<option value="3">
+30
+</option>
+<option value="3.5">
+35
+</option>
+<option value="4">
+40
+</option>
+<option value="4.5">
+45
+</option>
+<option value="5">
+50
+</option>
+<option value="5.5">
+55
+</option>
+<option value="6">
+60
+</option>
+</select>
+<span class="input-group-addon">Min trav/ galopp</span></div>
+</div>
+<div class="col-sm-5">
+<div class="input-group"><span class="input-group-addon">Hästen rids</span>
+<select name="daysaweek" id="daysaweek" class="form-control">
+<option value="0">
+0
+</option>
+<option value="1">
+1
+</option>
+<option value="2">
+2
+</option>
+<option value="3">
+3
+</option>
+<option value="4">
+4
+</option>
+<option value="5">
+5
+</option>
+<option value="6">
+6
+</option>
+<option value="7">
+7
+</option>
+</select>
+<span class="input-group-addon">dag(ar) i veckan</span></div>
+</div>
+
+</div>
+<div class="clear"></div>
+<center>
+<a href="#tre" class="scroll-link" data-id="tre"><button type='button' class='btn btn-lg btn-success' style="float:none; margin-top:50px;" id="totre">Nästa steg!</button></a>
+</center>
+<hr class="divide">
+</div>
+</div>
+</section>	        
+<section>	        
+<div id="tre" class="page-section"></div>
+<div class="wrapper">
+
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading">
+Resultat från grovfoderanalysen
+</div>
+<div class="panel-body">
+<p>
+Värdena gäller per kg ts.
+</p>
+</div>
+
+<!-- Table -->
+<table class="table">
+<tr><td>
+
+<span class="longtxt">Torrsubstans (%)</span>
+<span class="shorttxt">TS (%)</span>
+
+</td><td>
+
+<span class="longtxt">Energi (MJ)</span>
+<span class="shorttxt">MJ</span>
+</td><td>
+
+<span class="longtxt">SmbRp (g)</span>
+<span class="shorttxt">SmbRp</span>
+</td><td>
+
+<span class="longtxt">Calcium (g)</span>
+<span class="shorttxt">Ca</span>
+</td><td>
+
+<span class="longtxt">Fosfor (g)</span>
+<span class="shorttxt">P</span>
+</td>
+</tr>
+<tr><td>
+
+<input type="text" name="hayanalysists" id="hayanalysists" value="84" class="form-control" placeholder=""  />
+</td><td>
+
+<input type="text" name="hayanalysisenergy" id="hayanalysisenergy" value="9.3" class="form-control" placeholder=""  />
+</td><td>
+
+<input type="text" name="hayanalysisprotein" id="hayanalysisprotein" value="65" class="form-control" placeholder=""  />
+</td><td>
+
+<input type="text" name="hayanalysisca" id="hayanalysisca" value="5.5" class="form-control" placeholder=""  />
+</td><td>
+
+<input type="text" name="hayanalysisp" id="hayanalysisp" value="1.6" class="form-control" placeholder=""  />
+</td>
+</tr>
+</table>
+
+<div class="clear"></div>
+<center>
+<a href="#fem" class="scroll-link" data-id="fem"><button type='button' class='btn btn-lg btn-success' style="float:none; margin-top:50px;" id="tofyra">Nästa steg!</button></a>
+</center>
+<hr class="divide">
+</div>
+
+
+
+<div id="hide">
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading">
+Hästens underhållsbehov
+</div>
+
+<!-- Table -->
+<table class="table">
+<tr><td>
+
+Energi (MJ)
+</td><td>
+
+SmbRp (g)
+</td><td>
+
+</tr>
+<tr><td>
+
+<input type="text" name="basictotalenergy" id="basictotalenergy" value="" class="form-control" placeholder=""  readonly />
+</td><td>
+
+<input type="text" name="basictotalprotein" id="basictotalprotein" value="" class="form-control" placeholder=""  readonly />
+</td>
+</tr>
+</table>
+</div>
+
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading">
+Tillägg för arbete
+</div>
+
+<!-- Table -->
+<table class="table">
+<tr><td>
+
+Energi (MJ)
+</td><td>
+
+SmbRp (g)
+</td><td>
+
+</tr>
+<tr><td>
+
+<input type="text" name="worktotalenergy" id="worktotalenergy" value="" class="form-control" placeholder=""  readonly />
+</td><td>
+
+<input type="text" name="worktotalprotein" id="worktotalprotein" value="" class="form-control" placeholder=""  readonly />
+</td>
+</tr>
+</table>
+</div>
+
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading">
+Övriga tillägg
+</div>
+
+<!-- Table -->
+<table class="table">
+<tr><td>
+
+Energi (MJ)
+</td><td>
+
+SmbRp (g)
+</td><td>
+
+</tr>
+<tr><td>
+
+<input type="text" name="othertotalenergy" id="othertotalenergy" value="" class="form-control" placeholder=""  readonly />
+</td><td>
+
+<input type="text" name="othertotalprotein" id="othertotalprotein" value="" class="form-control" placeholder=""  readonly />
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class="clear">
+</div>
+</div>
+</section>	        
+<section>	        
+<div id="fyra" class="page-section"></div>
+<div class="wrapper">
+
+
+<div class="panel panel-default" id="totalenergycss">
+<!-- Default panel contents -->
+<div class="panel-heading">
+Hästens totala behov och intag
+</div>
+<div class="panel-body">
+<p>
+...
+</p>
+</div>
+
+<!-- Table -->
+<table class="table">
+<tr>
+<td></td>
+<td>Energi (MJ)</td>
+<td>SmbRp (g)</td>
+<td>Ca (g)</td>
+<td>P (g)</td>
+</tr>
+<tr>
+<td>
+Behov
+</td>
+<td>
+<input type="text" name="finaltotalenergy" id="finaltotalenergy" value="" class="form-control" placeholder=""  readonly />
+</td>
+<td>
+<input type="text" name="finaltotalprotein" id="finaltotalprotein" value="" class="form-control" placeholder=""  readonly />
+</td>
+<td>
+<input type="text" name="finaltotalca" id="finaltotalca" value="" class="form-control" placeholder=""  readonly />
+</td>
+<td>
+<input type="text" name="finaltotalp" id="finaltotalp" value="" class="form-control" placeholder=""  readonly />
+</td>
+</tr>
+<tr>
+<td>
+Intag
+</td>
+<td>
+<input type="text" name="totalenergy" id="totalenergy" value="" class="form-control" placeholder=""  readonly />
+</td>
+<td>
+<input type="text" name="totalprotein" id="totalprotein" value="" class="form-control" placeholder=""  readonly />
+</td>
+<td>
+<input type="text" name="totalca" id="totalca" value="" class="form-control" placeholder=""  readonly />
+</td>
+<td>
+<input type="text" name="totalp" id="totalp" value="" class="form-control" placeholder=""  readonly />
+</td>
+<td>
+</td>
+</tr>
+</table>
+
+</div>
+</div>		
+</section>	        
+<section class="foderstat">	        
+<div id="fem" class="page-section"></div>
+<div class="wrapper">
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading">
+Foderstat
+</div>
+<div class="panel-body">
+<p>
+<button type='button' class='btn btn-default' id="print" onclick="window.print();">Skriv ut foderstat</button>
+
+<select name="brand" id="brand" class="form-control" onchange="changebrand(this.options[this.selectedIndex].value);">
+<option value="">Samtliga tillverkare</option>
+<option value="Granngården">Granngården</option>
+<option value="StHippolyt">StHippolyt</option>
+<option value="Pavo">Pavo</option>
+<option value="Dodson & Horrell">Dodson & Horrell</option>
+<option value="Krafft">Krafft</option>
+</select>
+
+<button type='button' class='btn btn-danger' id="magic" onclick='calculate();'>Autoberäkna!</button>    
+
+</p>
+</div>
+
+<!-- Table -->
+<table class="table smalltable">
+<tr>
+<td class="col-xs-2">
+Foderstat
+</td>
+<td class="col-xs-2">
+Mängd (kg)
+</td>
+<td class="col-xs-8">
+Info om fodret		  
+</td></tr>
+
+<tr>
+<td class="col-xs-1">
+<img src="hay.jpg" class="img img-circle" width='100%'>
+<div id='' style='text-align:center;'>Grovfoder</div>  
+</td>
+<td><input type='number' name='hayamount' id='hayamount' value='' class='form-control' placeholder='' readonly />
+<input type="text" name="hayenergy" id="hayenergy" value="" class="form-control" placeholder="" style="display:none;"  readonly />
+<input type="text" name="hayprotein" id="hayprotein" value="" class="form-control" placeholder="" style="display:none;"  readonly />
+<input type="text" name="hayca" id="hayca" value="" class="form-control" placeholder="" style="display:none;"  readonly />
+<input type="text" name="hayp" id="hayp" value="" class="form-control" placeholder="" style="display:none;"  readonly />
+</td>
+<td></td>
+</tr>
+
+<tr id="extrastraw">
+<td class="col-xs-1 extrastraw">
+<img src="hay.jpg" class="img img-circle" width='100%'>
+<div id='' style='text-align:center;'>Halm, <em>eller annat näringsfattigt grovfoder</em></div>  
+</td>
+<td><input type='number' name='strawamount' id='strawamount' value='' class='form-control' placeholder='' readonly  /></td>
+<td>
+Eftersom mängen grovfoder som anges ovan är mindre än den rekommenderade mängden för hästens vikt, så skulle vi rekommendera att foderstaten kompletteras med halm eller något annat <em>näringsfattigt</em> grovfoder - så att den rekomenderade mängden grovfoder uppfylls.
+</td>
+</tr>
+
+<tr><td>
+<div id="image"></div>
+<div id='extrafoodname' style='text-align:center;'></div>  
+</td><td>
+<input type='number' name='extrafoodamount' id='extrafoodamount' value='' class='form-control foodamount' placeholder='' readonly  />
+<input type='text' name='extrafoodenergy' id='extrafoodenergy' value='0' class='form-control foodenergy' placeholder='' style="display:none;"  readonly />
+<input type='text' name='extrafoodprotein' id='extrafoodprotein' value='0' class='form-control foodprotein' placeholder='' style="display:none;"  readonly />
+<input type='text' name='extrafoodca' id='extrafoodca' value='0' class='form-control foodca' placeholder='' style="display:none;"  readonly />
+<input type='text' name='extrafoodp' id='extrafoodp' value='0' class='form-control foodp' placeholder='' style="display:none;"  readonly /></td>
+<td>
+<div id='extrafoodinfo'+p´låö></div>
+</td>
+<td></tr> 
+
+
+<tr><td>
+<div id="imagea"></div>
+<div id='extrafoodnamea' style='text-align:center;'></div>  
+</td>
+<td><input type='number' name='extrafoodamounta' id='extrafoodamounta' value='' class='form-control foodamount' placeholder='' readonly  />
+<input type='text' name='extrafoodenergya' id='extrafoodenergya' value='0' class='form-control foodenergy' placeholder='' style="display:none;"  readonly />
+<input type='text' name='extrafoodproteina' id='extrafoodproteina' value='0' class='form-control foodprotein' placeholder='' style="display:none;"  readonly />
+<input type='text' name='extrafoodcaa' id='extrafoodcaa' value='0' class='form-control foodca' placeholder='' style="display:none;"  readonly />
+<input type='text' name='extrafoodpa' id='extrafoodpa' value='0' class='form-control foodp' placeholder='' style="display:none;"  readonly /></td><td>
+
+<div id='extrafoodinfoa'+p´låö></div>
+</td>
+</tr>
+</table>
+</div>		
+
+<div class="clear"></div>
+
+</div>
+</section>	        
+<section>	        
+<div id="sex" class="page-section"></div>
+<div class="wrapper">
+
+
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading">
+Uppfylls kraven på intag?
+</div>
+<div class="panel-body">
+<p>
+
+</p>
+</div>
+
+<!-- Table -->
+<table class="table">
+<tr>
+<td class="col-xs-4">
+Kontrollering
+</td>
+<td class="col-xs-2">
+Behov
+</td>
+<td class="col-xs-2">
+Intag
+</td>
+</tr>
+<tr>
+<td class="col-xs-2">
+Grovfodergiva (MINST)
+</td>
+
+<td>  
+<div class="input-group">
+<input type="text" name="hayneed" id="hayneed" value="" class="form-control" placeholder=""  readonly />
+<span class="input-group-addon">
+kg
+</span>
+</div>
+</td>
+<td>
+<div class="input-group">
+<input type="text" name="hayneedis" id="hayneedis" value="" class="form-control" placeholder=""  readonly />
+<span class="input-group-addon">
+kg
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+Grovfodergiva (rekommenderat minst)
+</td>
+<td>
+<div class="input-group">
+<input type="text" name="hayneedtwo" id="hayneedtwo" value="" class="form-control" placeholder=""  readonly />
+<span class="input-group-addon">
+kg
+</span>
+</div>
+</td>
+<td>
+<div class="input-group">
+<input type="text" name="hayneedtwois" id="hayneedtwois" value="" class="form-control" placeholder=""  readonly />
+<span class="input-group-addon">
+kg
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+SmbRp / MJ
+</td>
+<td>
+<input type="text" name="" id="" value="6.0" class="form-control" placeholder=""  readonly />
+</td>
+<td>
+<input type="text" name="smbrpandmj" id="smbrpandmj" value="" class="form-control" placeholder=""  readonly />
+</td>
+</tr>
+<tr>
+<td>
+Ca / P
+</td>
+<td>
+<input type="text" name="" id="" value="1.7" class="form-control" placeholder=""  readonly />
+</td>
+<td>
+<input type="text" name="caandp" id="caandp" value="" class="form-control" placeholder=""  readonly />
+</td>
+</tr>
+</table>
+</div>
+<div class="clear">
+</div>
+</div>
+</section>	        
+<section>	        
+
+<div class="wrapper">
+
+<div class="col-sm-12 footer">
+<h3>Vem sa att det är svårt att beräkna foderstater?</h3>
+<h6>© 2014 Easyrider | Producerad av <a href="http://www.easyrider.nu">Easyrider</a></h6>	
+</div>
+<div class="clear"></div>
+</div>
+</section>	        
+
+
+
+<script> 
+$(document).ready(function(){
+$(".toggleinfo").click(function(){
+$(".info").slideToggle("slow");
+});
+});
+</script>
+
+<div class="clear"></div>
+
+<div class="modal fade" id="hweight" tabindex="-1" role="dialog" aria-labelledby="hweightLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="hweightLabel">Beräkna hästens vikt</h3>
+      </div>
+      <div class="modal-body">
+
+		<div class="col-sm-6">
+
+		<div id="horseweightb"><h3>Mankhöjden:</h3>
+		Mankhöjden mäts vinkelrätt mot marken till mankens högsta höjd.
+
+		<p /><input type="text" name="gethorseweightb" id="gethorseweightb" value="" class="form-control" placeholder="Skriv mått här" /></div>
+
+		<div id="horseweightd"><p /><h3>Längdmått:</h3>
+		Längden mäts från armbåge till bärbensknöl.
+
+		<p /><input type="text" name="gethorseweightd" id="gethorseweightd" value="" class="form-control" placeholder="Skriv mått här" /></div>
+
+		<div id="horseweighta"><p /><h3>Lansmärkesomfånget:</h3>
+		Lansmärkesomfånget mäts från gropen (märket efter riddarens lans) framför manken och runt bålen (precis bakom frambenet).
+
+		<p /><input type="text" name="gethorseweighta" id="gethorseweighta" value="" class="form-control" placeholder="Skriv mått här" /></div>
+
+		<div id="horseweightc"><p /><h3>Bröstomfånget:</h3>
+		Bröstomfånget är måttet bakom manke och armbåge runt bålen.
+
+		<p /><input type="text" name="gethorseweightc" id="gethorseweightc" value="" class="form-control" placeholder="Skriv mått här" /></div>
+
+		</div>
+
+		<div class="col-sm-6 hidden-xs" id="high">
+		<div id="horse" class="horse">
+		</div>
+		</div>
+		
+		<div class="clear"></div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+        <button id="submitweight" class="btn btn-success" onclick="calcweight();" data-dismiss="modal">Infoga vikt</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Replace source
+$('img').error(function(){
+$(this).attr('src', 'foodimg/imgmissing.jpg');
+});
+
+</script>
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#noll" class="scroll-link" data-id="noll"><span class="navbar-brand">Foderkalkylatorn</span></a>
+</div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li><a href="#ett" class="scroll-link" data-id="ett">1. Info om hästen</a></li>
+<li><a href="#tva" class="scroll-link" data-id="tva">2. Hästens träning</a></li>
+<li><a href="#tre" class="scroll-link" data-id="tre">3. Grovfodret</a></li>
+<li><a href="#fem" class="scroll-link" data-id="fem">4. Foderstaten</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Övrigt <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="#fyra" class="scroll-link" data-id="fyra">Hästens totala behov</a></li>
+<li><a href="#sex" class="scroll-link" data-id="sex">Krav på intag</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+
+<a href="#ett" class="scroll-link" data-id="ett"><svg height="50" width="50" class="navbtn1">
+<circle cx="13" cy="13" r="10" stroke="#fff" stroke-width="3" fill="none" id="navbtn1" />
+Sorry, your browser does not support inline SVG.  
+</svg></a>
+<a href="#tva" class="scroll-link" data-id="tva"><svg height="50" width="50" class="navbtn2">
+<circle cx="13" cy="13" r="10" stroke="#fff" stroke-width="3" fill="none" id="navbtn2" />
+Sorry, your browser does not support inline SVG.  
+</svg></a>
+<a href="#tre" class="scroll-link" data-id="tre"><svg height="50" width="50" class="navbtn3">
+<circle cx="13" cy="13" r="10" stroke="#fff" stroke-width="3" fill="none" id="navbtn3" />
+Sorry, your browser does not support inline SVG.  
+</svg></a>
+<a href="#fem" class="scroll-link" data-id="fem"><svg height="50" width="50" class="navbtn4">
+<circle cx="13" cy="13" r="10" stroke="#fff" stroke-width="3" fill="none" id="navbtn4" />
+Sorry, your browser does not support inline SVG.  
+</svg></a>
+
+
+<script>
+$(document).ready(function(){
+$(".chatbutton").click(function(){
+$(".chatbox").toggle();
+});
+});
+</script>
+
+<div class="chatbox col-xs-12 col-sm-4" id="chatbox">
+
+<div id="newchatbox">
+
+</div>
+
+<hr>
+
+<!-- Leave a comment -->
+
+<div class="form-group col-xs-12">
+<div class="input-group">
+<div class="input-group-addon"><i class="ion-person"></i></div>
+<input class="form-control" type="text" placeholder="Namn" id="chatname">
+</div>
+</div>
+<div class="form-group col-xs-12">
+<div class="input-group">
+<div class="input-group-addon"><i class="ion-compose"></i></div>
+<textarea class="form-control" placeholder="Meddelande" id="chatmessage"></textarea>
+</div>
+</div>
+<center><button type='button' class='btn btn-default' style="float:none;" onclick="chat();">Skicka</button></center>
+<div class="clear"></div>  
+
+</div>
+<div class="chatbutton col-xs-12 col-sm-4">Realtidschat</div>
+
+<div id="loading">
+<div id="loaded"><i class="ion-loading-c"></i><br>Söker fodersort...</div>
+</div>  
+</div>
+</body>
+</html>
