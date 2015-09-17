@@ -5,9 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Foderkalkylatorn - en foderkalkylator för häst">
+
 <title>
-Foderkalkylatorn
+Foderkalkylatorn - en foderkalkylator för häst
 </title>
+
+<link rel="canonical" href="http://www.foderkalkylatorn.se:8080/">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript">
 </script>
@@ -65,18 +69,9 @@ Foderkalkylatorn
       </div>
       <div class="modal-body">
 
-          <p>Foderkalkylatorn är skapad för att göra foderstatsberäkningarna enkla för er hästägare. I stället för att själva behöva sitta och titta i formelboken, försöka komma ihåg gymnasiematematiken, och när näringsbehovet är uträknat (baserat på en mängd olika faktorer), matcha värderna mot olika foder för att se vilket foder som passar hästen bäst. Alldeles för tråkigt, jobbigt, komplicerat, och tidskrävande!
+          <p><b>Foderkalkylatorn</b> är skapad för att göra foderstatsberäkningarna enkla för er hästägare. I stället för att själva behöva sitta och titta i formelboken, försöka komma ihåg gymnasiematematiken, och när näringsbehovet är uträknat (baserat på en mängd olika faktorer), matcha värderna mot olika foder för att se vilket foder som passar hästen bäst. Alldeles för tråkigt, jobbigt, komplicerat, och tidskrävande!
 
-          <p>I Foderkalkylatorn har jag matat in formlerna från den där formelboken, och låter istället programmet räkna ut hästens näringsbehov. Ett stort antal olika tilläggsfodersorter, samt respektives näringsinnehåll, har lagts i en databas. Sedan, baserat på hästens näringsbehov, föreslår programmet en rimlig mängd grovfoder och tilläggsfoder.
-
-          <h3>Tekniken bakom Foderkalkylatorn</h3>
-          <p>Det började i juni 2014, när jag bestämde mig för att jag minsann skulle lära mig hur man lagrar och hämtar data från en MySQL-databas - något jag aldrig gjort förut. Inte långt senare var Foderkalkylatorn 1.0 redo att publiceras. Jag skrattar mig själv i ansiktet när jag tänker på att jag, för bara ett par månader sedan, tyckte att grundläggande PHP och MySQL var krångligt!
-
-          <p>Sedan såg jag ljuset ... Nej, jag skojar bara; Sen blev jag presenterad för Prolog! Ett "logiskt programmeringsspråk" som dök upp 1972, och är associerat med artificiell intelligens och datorlingvistik. Logiskt tänkande är min starka sida, så detta språk passade mig perfekt.
-
-          <p>För att göra en lång historia kort slutade det med att jag omkodade Foderkalkylatorn till en relativt komplicerat, webbaserat program, baserat på WebSockets och Prolog som back-end. Funktionen att använda Prolog som ett back-end-program, är dessutom en relativt ny möjlighet.
-
-          <p>Det är därför jag vågar säga att Foderkalkylatorn 2.0, verkligen är "one of a kind".
+          <p>I <b>Foderkalkylatorn</b> har jag matat in formlerna från den där formelboken, och låter istället programmet räkna ut hästens näringsbehov. Ett stort antal olika tilläggsfodersorter, samt respektives näringsinnehåll, har lagts i en databas. Sedan, baserat på hästens näringsbehov, föreslår programmet en rimlig mängd grovfoder och tilläggsfoder.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
@@ -472,19 +467,19 @@ Värdena gäller per kg ts.
 </tr>
 <tr><td>
 
-<input type="text" name="hayanalysists" id="hayanalysists" value="84" class="form-control" placeholder=""  />
+<input type="text" name="hayanalysists" id="hayanalysists" value="73" class="form-control" placeholder=""  />
 </td><td>
 
-<input type="text" name="hayanalysisenergy" id="hayanalysisenergy" value="9.3" class="form-control" placeholder=""  />
+<input type="text" name="hayanalysisenergy" id="hayanalysisenergy" value="6.5" class="form-control" placeholder=""  />
 </td><td>
 
-<input type="text" name="hayanalysisprotein" id="hayanalysisprotein" value="65" class="form-control" placeholder=""  />
+<input type="text" name="hayanalysisprotein" id="hayanalysisprotein" value="34" class="form-control" placeholder=""  />
 </td><td>
 
-<input type="text" name="hayanalysisca" id="hayanalysisca" value="5.5" class="form-control" placeholder=""  />
+<input type="text" name="hayanalysisca" id="hayanalysisca" value="1.8" class="form-control" placeholder=""  />
 </td><td>
 
-<input type="text" name="hayanalysisp" id="hayanalysisp" value="1.6" class="form-control" placeholder=""  />
+<input type="text" name="hayanalysisp" id="hayanalysisp" value="1.1" class="form-control" placeholder=""  />
 </td>
 </tr>
 </table>
@@ -695,7 +690,7 @@ Info om fodret
 
 <tr>
 <td class="col-xs-1">
-<img src="hay.jpg" class="img img-circle" width='100%'>
+<img src="hay.jpg" class="img img-circle" width='100%' alt="Foderkalkylatorn">
 <div id='' style='text-align:center;'>Grovfoder</div>  
 </td>
 <td><input type='number' name='hayamount' id='hayamount' value='' class='form-control' placeholder='' readonly />
@@ -709,7 +704,7 @@ Info om fodret
 
 <tr id="extrastraw">
 <td class="col-xs-1 extrastraw">
-<img src="hay.jpg" class="img img-circle" width='100%'>
+<img src="hay.jpg" class="img img-circle" width='100%' alt="Foderkalkylatorn">
 <div id='' style='text-align:center;'>Halm, <em>eller annat näringsfattigt grovfoder</em></div>  
 </td>
 <td><input type='number' name='strawamount' id='strawamount' value='' class='form-control' placeholder='' readonly  /></td>
